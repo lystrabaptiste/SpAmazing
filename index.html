@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spAmazing Aesthetic Clinic</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+<!-- Hero Images -->
+    <div class="hero-images">
+        <img src="images/picture1.jpg" alt="">
+        <img src="images/picture2.jpg" alt="">
+        <img src="images/picture3.jpg" alt="">
+        <img src="images/picture4.jpg" alt="">
+    </div>
+
+
+<!-- Navigation -->
+<header class="navbar">
+
+    <div class="logo">
+        <img src="images/ICON AND NAME PEACH& WHITE.png" alt="Spa Logo">
+    </div>
+
+    <nav>
+
+        <a href="index.html" class="active">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+        </a>
+
+        <a href="shop.html">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span>Shop</span>
+        </a>
+
+        <a href="gallery.html">
+            <i class="fa-solid fa-image"></i>
+            <span>Gallery</span>
+        </a>
+
+        <a href="contact.html">
+            <i class="fa-solid fa-phone"></i>
+            <span>Contact</span>
+        </a>
+
+    </nav>
+
+    <div class="nav-buttons">
+
+        <a href="booking.html" class="book-btn-nav">
+            <i class="fa-solid fa-calendar-check"></i>
+            Book Now
+        </a>
+
+        <a href="login.html" class="login-btn">
+            <i class="fa-solid fa-user"></i>
+            Login
+        </a>
+
+    </div>
+
+</header>
+    
+  
+
+    
+    <!-- Services -->
+<section class="services">
+
+    <h1>OUR SERVICES</h1>
+
+    <div class="section-divider">
+        <span></span>
+        <i class="fa-solid fa-spa"></i>
+        <span></span>
+    </div>
+
+    <div class="service-grid">
+
+        <div class="service-card"
+             onclick="openService('Manicures','Professional nail care including shaping, cuticle care, polish application and nail enhancements.','$150','45 Minutes')">
+            <i class="fa-regular fa-hand-sparkles"></i>
+            <h3>Manicures</h3>
+        </div>
+
+        <div class="service-card"
+             onclick="openService('Pedicures','Foot care treatment including exfoliation, massage and nail grooming.','$180','60 Minutes')">
+            <i class="fa-solid fa-shoe-prints"></i>
+            <h3>Pedicures</h3>
+        </div>
+
+        <div class="service-card"
+             onclick="openService('Facials','Deep cleansing facial treatments designed to refresh, hydrate and rejuvenate your skin.','$250','60 Minutes')">
+            <i class="fa-regular fa-face-smile"></i>
+            <h3>Facials</h3>
+        </div>
+
+        <div class="service-card"
+             onclick="openService('Waxing & Sugaring','Hair removal services using professional waxing and sugaring techniques.','$200','45 Minutes')">
+            <i class="fa-solid fa-droplet"></i>
+            <h3>Waxing &<br>Sugaring</h3>
+        </div>
+
+        <div class="service-card"
+             onclick="openService('Vajacials','Specialized skincare treatment focused on soothing and rejuvenating intimate areas.','$300','60 Minutes')">
+            <i class="fa-solid fa-spa"></i>
+            <h3>Vajacials</h3>
+        </div>
+
+        <div class="service-card"
+             onclick="openService('Body Treatments','Luxurious body scrubs, wraps and skin rejuvenation treatments.','$400','90 Minutes')">
+            <i class="fa-solid fa-leaf"></i>
+            <h3>Body<br>Treatments</h3>
+        </div>
+
+        <div class="service-card"
+             onclick="openService('Eye Lashes','Classic, hybrid and volume eyelash extension services.','$220','90 Minutes')">
+            <i class="fa-regular fa-eye"></i>
+            <h3>Eye Lashes</h3>
+        </div>
+
+        <div class="service-card"
+             onclick="openService('Massage Therapy','Relaxing therapeutic massage to reduce stress and improve wellbeing.','$350','90 Minutes')">
+            <i class="fa-solid fa-hands"></i>
+            <h3>Massage<br>Therapy</h3>
+        </div>
+
+    </div>
+
+
+
+</section>
+
+    <!-- Testimonials -->
+    <section class="testimonial-section">
+        <h2>WHAT OUR CLIENTS SAY</h2>
+
+        <div class="testimonials">
+            <div class="testimonial-card">
+                <p>The best facial I've ever had!</p>
+                <h4>Jessica R.</h4>
+            </div>
+
+            <div class="testimonial-card">
+                <p>Amazing service and staff.</p>
+                <h4>Amanda B.</h4>
+            </div>
+
+            <div class="testimonial-card">
+                <p>Nail enhancements last long.</p>
+                <h4>Tasha M.</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->   
+<div class="features">
+
+    <div class="feature-item">
+        <i class="fa-solid fa-shield-heart"></i>
+        <h3>Safe & Clean Environment</h3>
+    </div>
+
+    <div class="feature-item">
+        <i class="fa-solid fa-certificate"></i>
+        <h3>Certified Professionals</h3>
+    </div>
+
+    <div class="feature-item">
+        <i class="fa-solid fa-gem"></i>
+        <h3>Premium Products</h3>
+    </div>
+
+    <div class="feature-item">
+        <i class="fa-solid fa-heart"></i>
+        <h3>Personalized Care</h3>
+    </div>
+
+</div>
+    <!-- Footer -->
+   <footer>
+
+    <div class="footer-column">
+        <i class="fa-solid fa-spa footer-logo"></i>
+        <h3>spAmazing</h3>
+        <p>Enhancing your beauty.</p>
+    </div>
+
+    <div class="footer-column">
+        <h4><i class="fa-solid fa-link"></i> Quick Links</h4>
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Gallery</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <div class="footer-column">
+        <h4><i class="fa-solid fa-phone"></i> Contact</h4>
+        <p><i class="fa-solid fa-phone-volume"></i> (876) 123-4567</p>
+        <p><i class="fa-solid fa-envelope"></i> spamazing@gmail.com</p>
+        <p><i class="fa-solid fa-location-dot"></i> Beauty Avenue</p>
+    </div>
+
+    <div class="footer-column">
+        <h4><i class="fa-solid fa-clock"></i> Hours</h4>
+        <p>Mon - Fri: 9am - 6pm</p>
+        <p>Sat: 9am - 4pm</p>
+    </div>
+
+</footer> 
+
+<div class="social-icons">
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-whatsapp"></i></a>
+</div>
+
+<!-- SERVICE POPUP -->
+<div id="serviceModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close" onclick="closeService()">&times;</span>
+
+        <h2 id="serviceTitle"></h2>
+
+        <p id="serviceDescription"></p>
+
+        <div class="service-details">
+            <p><strong>Price:</strong> <span id="servicePrice"></span></p>
+            <p><strong>Duration:</strong> <span id="serviceDuration"></span></p>
+        </div>
+
+        <button class="book-btn">
+            Book Appointment
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+function openService(title, description, price, duration){
+
+    document.getElementById("serviceTitle").innerText = title;
+    document.getElementById("serviceDescription").innerText = description;
+    document.getElementById("servicePrice").innerText = price;
+    document.getElementById("serviceDuration").innerText = duration;
+
+    document.getElementById("serviceModal").style.display = "block";
+}
+
+function closeService(){
+    document.getElementById("serviceModal").style.display = "none";
+}
+</script>
+
+</body>
+</html>
