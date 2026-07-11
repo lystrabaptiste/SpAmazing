@@ -65,5 +65,515 @@
     </div>
 
 </header>
-    
-  
+    <!-- ===========================
+         MAIN CONTAINER
+    =========================== -->
+
+    <main class="book-container">
+
+
+        <!-- ===========================
+             PROGRESS BAR
+        =========================== -->
+
+        <div class="progress-bar">
+
+            <div class="step active"
+                 data-step="0">
+
+                <div class="circle">
+                    1
+                </div>
+
+                <span>
+                    Select Service
+                </span>
+
+            </div>
+
+
+            <div class="line"></div>
+
+
+            <div class="step"
+                 data-step="1">
+
+                <div class="circle">
+                    2
+                </div>
+
+                <span>
+                    Your Details
+                </span>
+
+            </div>
+
+
+            <div class="line"></div>
+
+
+            <div class="step"
+                 data-step="2">
+
+                <div class="circle">
+                    3
+                </div>
+
+                <span>
+                    Date & Time
+                </span>
+
+            </div>
+
+
+            <div class="line"></div>
+
+
+            <div class="step"
+                 data-step="3">
+
+                <div class="circle">
+                    4
+                </div>
+
+                <span>
+                    Review
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- ===========================
+             WRAPPER
+        =========================== -->
+
+        <div class="booking-wrapper">
+
+
+            <!-- ===========================
+                 BOOKING FORM
+            =========================== -->
+
+            <div class="booking-form">
+                <!-- ==========================================
+                     STEP 1
+                ========================================== -->
+
+                <div class="form-step active">
+
+                    <h2>Select Your Service</h2>
+
+                    <p>
+                        Choose a category and the service you would like to book.
+                    </p>
+
+                    <!-- Category -->
+
+                    <div class="input-group">
+
+                        <label for="category">
+
+                            Category
+
+                        </label>
+
+                        <select id="category" required>
+
+                            <option value="">
+                                Choose Category
+                            </option>
+
+                            <option value="Facials">
+                                Facials
+                            </option>
+
+                            <option value="Massage">
+                                Massage
+                            </option>
+
+                            <option value="Waxing">
+                                Waxing
+                            </option>
+
+                            <option value="Body Treatments">
+                                Body Treatments
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Service -->
+
+                    <div class="input-group">
+
+                        <label for="service">
+
+                            Service
+
+                        </label>
+
+                        <select id="service" required>
+
+                            <option value="">
+                                Choose Service
+                            </option>
+
+                            <option value="Classic Facial"
+                                    data-price="350">
+
+                                Classic Facial
+
+                            </option>
+
+                            <option value="Hydrating Facial"
+                                    data-price="450">
+
+                                Hydrating Facial
+
+                            </option>
+
+                            <option value="Swedish Massage"
+                                    data-price="400">
+
+                                Swedish Massage
+
+                            </option>
+
+                            <option value="Deep Tissue Massage"
+                                    data-price="500">
+
+                                Deep Tissue Massage
+
+                            </option>
+
+                            <option value="Hot Stone Massage"
+                                    data-price="650">
+
+                                Hot Stone Massage
+
+                            </option>
+
+                            <option value="Brazilian Wax"
+                                    data-price="300">
+
+                                Brazilian Wax
+
+                            </option>
+
+                            <option value="Body Scrub"
+                                    data-price="550">
+
+                                Body Scrub
+
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Price Preview -->
+
+                    <div class="price-preview">
+
+                        <span>Estimated Cost</span>
+
+                        <h3 id="selectedPrice">
+
+                            $0.00
+
+                        </h3>
+
+                    </div>
+
+
+                    <!-- Buttons -->
+
+                    <div class="button-group">
+
+                        <button type="button"
+                                class="next-btn">
+
+                            Continue →
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- ==========================================
+                     STEP 2
+                ========================================== -->
+
+                <div class="form-step">
+
+                    <h2>Your Details</h2>
+
+                    <p>
+                        Enter your contact information.
+                    </p>
+
+                    <div class="input-group">
+
+                        <label for="FullName">
+                            Full Name
+                        </label>
+
+                        <input type="text"
+                               id="FullName"
+                               placeholder="Enter your Full Name"
+                               required>
+
+                    </div>
+
+                   
+
+                    <div class="input-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <input type="email"
+                               id="email"
+                               placeholder="example@email.com"
+                               required>
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label for="phone">
+                            Phone Number
+                        </label>
+
+                        <input type="tel"
+                               id="phone"
+                               placeholder="868-000-0000"
+                               required>
+
+                    </div>
+
+                    <div class="button-group">
+
+                        <button type="button"
+                                class="prev-btn">
+
+                            ← Previous
+
+                        </button>
+
+                        <button type="button"
+                                class="next-btn">
+
+                            Continue →
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ==========================================
+                     STEP 3
+                ========================================== -->
+
+                <div class="form-step">
+
+                    <h2>Select Date & Time</h2>
+
+                    <p>
+                        Choose your preferred appointment date and time.
+                    </p>
+
+                    <div class="input-group">
+
+                        <label for="appointmentDate">
+
+                            Appointment Date
+
+                        </label>
+
+                        <input type="date"
+                               id="appointmentDate"
+                               required>
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label for="appointmentTime">
+
+                            Appointment Time
+
+                        </label>
+
+                        <select id="appointmentTime"
+                                required>
+
+                            <option value="">
+                                Select Time
+                            </option>
+
+                            <option>9:00 AM</option>
+                            <option>10:00 AM</option>
+                            <option>11:00 AM</option>
+                            <option>12:00 PM</option>
+                            <option>1:00 PM</option>
+                            <option>2:00 PM</option>
+                            <option>3:00 PM</option>
+                            <option>4:00 PM</option>
+                            <option>5:00 PM</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="button-group">
+
+                        <button type="button"
+                                class="prev-btn">
+
+                            ← Previous
+
+                        </button>
+
+                        <button type="button"
+                                class="next-btn">
+
+                            Continue →
+
+                        </button>
+
+                    </div>
+
+                </div>
+                <!-- ==========================================
+                     STEP 4
+                ========================================== -->
+
+                <div class="form-step">
+
+                    <h2>Review Your Booking</h2>
+
+                    <p>
+                        Please review your appointment details before confirming.
+                    </p>
+
+                    <div class="review-box">
+
+                        <p>
+                            <strong>Category:</strong>
+                            <span id="reviewCategory"></span>
+                        </p>
+
+                        <p>
+                            <strong>Service:</strong>
+                            <span id="reviewService"></span>
+                        </p>
+
+                        <p>
+                            <strong>Name:</strong>
+                            <span id="reviewName"></span>
+                        </p>
+
+                        <p>
+                            <strong>Email:</strong>
+                            <span id="reviewEmail"></span>
+                        </p>
+
+                        <p>
+                            <strong>Phone:</strong>
+                            <span id="reviewPhone"></span>
+                        </p>
+
+                        <p>
+                            <strong>Date:</strong>
+                            <span id="reviewDate"></span>
+                        </p>
+
+                        <p>
+                            <strong>Time:</strong>
+                            <span id="reviewTime"></span>
+                        </p>
+
+                    </div>
+
+                    <div class="button-group">
+
+                        <button type="button"
+                                class="prev-btn">
+
+                            ← Previous
+
+                        </button>
+
+                        <button type="button"
+                                class="confirm-btn">
+
+                            Confirm Booking
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==========================================
+                 BOOKING SUMMARY
+            ========================================== -->
+
+            <div class="booking-summary">
+
+                <h3>Booking Summary</h3>
+
+                <div class="summary-box">
+
+                    <p><strong>Service</strong></p>
+                    <span id="summaryService">
+                        None Selected
+                    </span>
+
+                    <hr>
+
+                    <p><strong>Date</strong></p>
+                    <span id="summaryDate">
+                        --
+                    </span>
+
+                    <hr>
+
+                    <p><strong>Time</strong></p>
+                    <span id="summaryTime">
+                        --
+                    </span>
+
+                    <hr>
+
+                    <p><strong>Total</strong></p>
+
+                    <h2 id="summaryPrice">
+                        $0.00
+                    </h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
