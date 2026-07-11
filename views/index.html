@@ -4,46 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>spAmazing Aesthetic Clinic</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
-<!-- Hero Images -->
-    <div class="hero-images">
-        <img src="images/picture1.jpg" alt="">
-        <img src="images/picture2.jpg" alt="">
-        <img src="images/picture3.jpg" alt="">
-        <img src="images/picture4.jpg" alt="">
-    </div>
+<!-- Hero Images -->  
+<div class="hero-images">
+    <img src="{{ url_for('static', filename='images/picture1.jpg') }}" alt="">
+    <img src="{{ url_for('static', filename='images/picture2.jpg') }}" alt="">
+    <img src="{{ url_for('static', filename='images/picture3.jpg') }}" alt="">
+    <img src="{{ url_for('static', filename='images/picture4.jpg') }}" alt="">
+</div>
 
 
 <!-- Navigation -->
 <header class="navbar">
 
     <div class="logo">
-        <img src="images/ICON AND NAME PEACH& WHITE.png" alt="Spa Logo">
+        <img src="{{ url_for('static', filename='images/ICON AND NAME PEACH& WHITE.png') }}" alt="Spa Logo">
     </div>
 
     <nav>
 
-        <a href="index.html" class="active">
+        <a href="{{ url_for('home') }}" class="active">
             <i class="fa-solid fa-house"></i>
             <span>Home</span>
         </a>
 
-        <a href="shop.html">
+        <a href="{{ url_for('shop') }}">
             <i class="fa-solid fa-bag-shopping"></i>
             <span>Shop</span>
         </a>
 
-        <a href="gallery.html">
+        <a href="{{ url_for('gallery') }}">
             <i class="fa-solid fa-image"></i>
             <span>Gallery</span>
         </a>
 
-        <a href="contact.html">
+        <a href="{{ url_for('contact') }}">
             <i class="fa-solid fa-phone"></i>
             <span>Contact</span>
         </a>
@@ -52,7 +52,7 @@
 
     <div class="nav-buttons">
 
-        <a href="book.html" class="login-btn">
+        <a href="{{ url_for('book') }}" class="login-btn">
             <i class="fa-solid fa-calendar-check"></i>
             Book Now
         </a>
@@ -70,7 +70,7 @@
 
     
     <!-- Services -->
-<section class="services">
+<section class="services" class="services">
 
     <h1>OUR SERVICES</h1>
 
@@ -193,10 +193,10 @@
 
     <div class="footer-column">
         <h4><i class="fa-solid fa-link"></i> Quick Links</h4>
-        <a href="#">Home</a>
-        <a href="#">Services</a>
-        <a href="#">Gallery</a>
-        <a href="#">Contact</a>
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="#services">Services</a>
+       <a href="{{ url_for('gallery') }}">Gallery</a>
+       <a href="{{ url_for('contact') }}">Contact</a>
     </div>
 
     <div class="footer-column">
@@ -255,7 +255,7 @@
         <!-- Left Side -->
         <div class="login-left">
 
-            <img src="images/picture1.jpg" alt="Spa">
+            <img src="{{ url_for('static', filename='images/picture1.jpg') }}" alt="Spa">
 
             <div class="left-content">
 
@@ -277,7 +277,7 @@
         <!-- Right Side -->
         <div class="login-right">
 
-            <img src="images/ICON AND NAME PEACH& WHITE.png" class="modal-logo">
+            <img src="{{ url_for('static', filename='images/ICON AND NAME PEACH& WHITE.png') }}" class="modal-logo">
 
             <h1>Welcome Back</h1>
 

@@ -1273,3 +1273,8 @@ button {
         font-size: 34px;
     }
 }
+
+.active-btn {
+    background-color: #d7b1aa;
+    color: rgb(0, 0, 0);
+}
