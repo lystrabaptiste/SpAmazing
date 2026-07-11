@@ -28,7 +28,7 @@
 
     <nav>
 
-        <a href="index.html" class="active">
+        <a href="index.html" >
             <i class="fa-solid fa-house"></i>
             <span>Home</span>
         </a>
@@ -52,7 +52,7 @@
 
     <div class="nav-buttons">
 
-        <a href="book.html" class="login-btn">
+        <a href="book.html" class="login-btn"  class="active">
             <i class="fa-solid fa-calendar-check"></i>
             Book Now
         </a>
@@ -791,6 +791,68 @@ document.querySelector(".confirm-btn").addEventListener("click", () => {
 
 showStep(0);
 
+//login
+// LOGIN MODAL
+
+const loginModal = document.getElementById("loginModal");
+
+const loginBtn = document.getElementById("loginBtn");
+
+const closeLogin = document.querySelector(".close-login");
+
+loginBtn.onclick = function(e){
+
+    e.preventDefault();
+
+    loginModal.style.display = "flex";
+
+}
+
+closeLogin.onclick = function(){
+
+    loginModal.style.display = "none";
+
+}
+
+window.onclick = function(event){
+
+    if(event.target == loginModal){
+
+        loginModal.style.display = "none";
+
+    }
+
+}
+
+// PASSWORD SHOW / HIDE
+
+const password = document.getElementById("password");
+
+const togglePassword = document.getElementById("togglePassword");
+
+togglePassword.onclick = function(){
+
+    if(password.type === "password"){
+
+        password.type = "text";
+
+        this.classList.remove("fa-eye");
+
+        this.classList.add("fa-eye-slash");
+
+    }
+
+    else{
+
+        password.type = "password";
+
+        this.classList.remove("fa-eye-slash");
+
+        this.classList.add("fa-eye");
+
+    }
+
+}
     </script>
 
 
