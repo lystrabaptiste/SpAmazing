@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>spAmazing Aesthetic Clinic</title>
-    <link rel="stylesheet" href="style.css">
+    <!--<link rel="stylesheet" href="style.css">-->
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -12,10 +12,10 @@
 <body>
 <!-- Hero Images -->
     <div class="hero-images">
-        <img src="images/picture1.jpg" alt="">
-        <img src="images/picture2.jpg" alt="">
-        <img src="images/picture3.jpg" alt="">
-        <img src="images/picture4.jpg" alt="">
+        <img src="{{ url_for( 'static', filename='images/picture1.jpg') }}" alt="">
+        <img src="{{ url_for( 'static', filename='images/picture2.jpg') }}" alt="">
+        <img src="{{ url_for( 'static', filename='images/picture3.jpg') }}" alt="">
+        <img src="{{ url_for( 'static', filename='images/picture4.jpg') }}" alt="">
     </div>
 
 
@@ -23,14 +23,14 @@
 <header class="navbar">
 
     <div class="logo">
-        <img src="images/ICON AND NAME PEACH& WHITE.png" alt="Spa Logo">
+        <img src="{{ url_for( 'static', filename='images/ICON AND NAME PEACH& WHITE.png') }}" alt="Spa Logo">
     </div>
 
     <nav>
 
-        <a href="index.html">
+        <a href="{{ url_for('home')}}">
             <i class="fa-solid fa-house"></i>
-            <span>Home</span>
+           Home
         </a>
 
         <a href="shop.html" class="active">
