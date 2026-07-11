@@ -57,12 +57,211 @@
             Book Now
         </a>
 
-        <a href="login.html" class="login-btn">
+        <a href="#" class="login-btn" id="loginBtn">
             <i class="fa-solid fa-user"></i>
             Login
         </a>
 
     </div>
 
+
+
+    
+
+<!-- ================= LOGIN MODAL ================= -->
+<div id="loginModal" class="login-modal">
+
+    <div class="login-modal-content">
+
+        <!-- Close Button -->
+        <span class="close-login">&times;</span>
+
+        <!-- Left Side -->
+        <div class="login-left">
+
+            <img src="images/picture1.jpg" alt="Spa">
+
+            <div class="left-content">
+
+                <i class="fa-solid fa-lock"></i>
+
+                <h2>Secure Booking Access</h2>
+
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> Book appointments online</li>
+                    <li><i class="fa-solid fa-check"></i> View booking history</li>
+                    <li><i class="fa-solid fa-check"></i> Earn loyalty rewards</li>
+                    <li><i class="fa-solid fa-check"></i> Manage treatments</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- Right Side -->
+        <div class="login-right">
+
+            <img src="images/ICON AND NAME PEACH& WHITE.png" class="modal-logo">
+
+            <h1>Welcome Back</h1>
+
+            <p>
+                Sign in to manage appointments,
+                view bookings and enjoy VIP rewards.
+            </p>
+
+            <form>
+
+                <div class="input-box">
+                    <i class="fa-regular fa-user"></i>
+                    <input
+                        type="email"
+                        placeholder="Email Address"
+                        required>
+                </div>
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Password"
+                        required>
+
+                    <i class="fa-solid fa-eye eye-icon"
+                       id="togglePassword"></i>
+
+                </div>
+
+                <div class="login-options">
+
+                    <label>
+                        <input type="checkbox">
+                        Remember Me
+                    </label>
+
+                    <a href="#">Forgot Password?</a>
+
+                </div>
+
+                <button class="login-button">
+                    LOGIN
+                </button>
+
+                <div class="or">
+                    OR
+                </div>
+
+                <button type="button" class="guest-button">
+                    <i class="fa-regular fa-user"></i>
+                    Continue As Guest
+                </button>
+
+                <p class="register-text">
+
+                    Don't have an account?
+
+                    <a href="#" id="openRegister">
+                        Register Here
+                    </a>
+
+                </p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<script>
+
+function openService(title, description, price, duration){
+
+    document.getElementById("serviceTitle").innerText = title;
+    document.getElementById("serviceDescription").innerText = description;
+    document.getElementById("servicePrice").innerText = price;
+    document.getElementById("serviceDuration").innerText = duration;
+
+    document.getElementById("serviceModal").style.display = "block";
+}
+
+function closeService(){
+    document.getElementById("serviceModal").style.display = "none";
+}
+
+// LOGIN MODAL
+
+const loginModal = document.getElementById("loginModal");
+
+const loginBtn = document.getElementById("loginBtn");
+
+const closeLogin = document.querySelector(".close-login");
+
+loginBtn.onclick = function(e){
+
+    e.preventDefault();
+
+    loginModal.style.display = "flex";
+
+}
+
+closeLogin.onclick = function(){
+
+    loginModal.style.display = "none";
+
+}
+
+window.onclick = function(event){
+
+    if(event.target == loginModal){
+
+        loginModal.style.display = "none";
+
+    }
+
+}
+
+// PASSWORD SHOW / HIDE
+
+const password = document.getElementById("password");
+
+const togglePassword = document.getElementById("togglePassword");
+
+togglePassword.onclick = function(){
+
+    if(password.type === "password"){
+
+        password.type = "text";
+
+        this.classList.remove("fa-eye");
+
+        this.classList.add("fa-eye-slash");
+
+    }
+
+    else{
+
+        password.type = "password";
+
+        this.classList.remove("fa-eye-slash");
+
+        this.classList.add("fa-eye");
+
+    }
+
+}
+
+
+</script>
+
+
+
+</body>
 </header>
     
