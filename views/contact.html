@@ -68,7 +68,6 @@
 </header>
     
 
-
 <!-- ================= LOGIN MODAL ================= -->
 <div id="loginModal" class="login-modal">
 
@@ -176,13 +175,49 @@
 
     </div>
 
-</div>    
+</div>
 
+<div id="registerModal" class="modal">
 
+    <div class=" register-box">
 
+        <span class="close-register">&times;</span>
+
+        <h2>Create Account</h2>
+
+        <form>
+
+            <input type="text" placeholder="Full Name">
+
+            <input type="email" placeholder="Email Address">
+
+            <input type="tel" placeholder="Phone Number">
+
+            <input type="password" placeholder="Password">
+
+            <input type="password" placeholder="Confirm Password">
+
+            <button type="submit">
+                REGISTER
+            </button>
+
+        </form>
+
+        <p>
+            Already have an account?
+            <a href="#" id="backToLogin">
+                Login Here
+            </a>
+        </p>
+
+    </div>
+
+</div>
 
 
 <script>
+
+
 
 function openService(title, description, price, duration){
 
@@ -261,8 +296,38 @@ togglePassword.onclick = function(){
 }
 
 
-</script>
+const registerModal = document.getElementById("registerModal");
 
+const openRegister = document.getElementById("openRegister");
+const backToLogin = document.getElementById("backToLogin");
+
+openRegister.addEventListener("click", function(e){
+
+    e.preventDefault();
+
+    loginModal.style.display = "none";
+
+    registerModal.style.display = "flex";
+
+});
+
+backToLogin.addEventListener("click", function(e){
+
+    e.preventDefault();
+
+    registerModal.style.display = "none";
+
+    loginModal.style.display = "flex";
+
+});
+
+const closeRegister = document.querySelector(".close-register");
+
+closeRegister.onclick = function () {
+    registerModal.style.display = "none";
+};
+
+</script>
 
 
 </body>

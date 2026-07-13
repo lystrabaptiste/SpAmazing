@@ -67,6 +67,23 @@
 
 </header>
     
+<div class="guest-banner">
+
+    <i class="fa-solid fa-circle-info"></i>
+
+    <div>
+
+        <strong>You're booking as a guest.</strong><br>
+
+        Your appointment will be confirmed by email, but it won't be saved to an account.
+
+    </div>
+
+    <a href="#" id="guestRegister">
+        Create Account
+    </a>
+
+</div>
 
 
     <!-- ===========================
@@ -75,12 +92,12 @@
 
     <main class="book-container">
 
-
         <!-- ===========================
              PROGRESS BAR
         =========================== -->
 
         <div class="progress-bar">
+            
 
             <div class="step active"
                  data-step="0">
@@ -149,12 +166,14 @@
         </div>
 
 
+
         <!-- ===========================
              WRAPPER
         =========================== -->
+       
 
         <div class="booking-wrapper">
-
+       
 
             <!-- ===========================
                  BOOKING FORM
@@ -663,9 +682,14 @@
                     OR
                 </div>
 
-                <button type="button" class="guest-button">
+                <button
+                    type="button"
+                    class="guest-button"
+                    onclick="window.location.href='{{ url_for('book') }}'">
+
                     <i class="fa-regular fa-user"></i>
                     Continue As Guest
+
                 </button>
 
                 <p class="register-text">
@@ -681,6 +705,43 @@
             </form>
 
         </div>
+
+    </div>
+
+</div>
+
+<div id="registerModal" class="modal">
+
+    <div class=" register-box">
+
+        <span class="close-register">&times;</span>
+
+        <h2>Create Account</h2>
+
+        <form>
+
+            <input type="text" placeholder="Full Name">
+
+            <input type="email" placeholder="Email Address">
+
+            <input type="tel" placeholder="Phone Number">
+
+            <input type="password" placeholder="Password">
+
+            <input type="password" placeholder="Confirm Password">
+
+            <button type="submit">
+                REGISTER
+            </button>
+
+        </form>
+
+        <p>
+            Already have an account?
+            <a href="#" id="backToLogin">
+                Login Here
+            </a>
+        </p>
 
     </div>
 
@@ -767,6 +828,38 @@ togglePassword.onclick = function(){
 
 }
 
+
+
+const registerModal = document.getElementById("registerModal");
+
+const openRegister = document.getElementById("openRegister");
+const backToLogin = document.getElementById("backToLogin");
+
+openRegister.addEventListener("click", function(e){
+
+    e.preventDefault();
+
+    loginModal.style.display = "none";
+
+    registerModal.style.display = "flex";
+
+});
+
+backToLogin.addEventListener("click", function(e){
+
+    e.preventDefault();
+
+    registerModal.style.display = "none";
+
+    loginModal.style.display = "flex";
+
+});
+
+const closeRegister = document.querySelector(".close-register");
+
+closeRegister.onclick = function () {
+    registerModal.style.display = "none";
+};
 
 
 
@@ -931,8 +1024,8 @@ function updateReview() {
         document.getElementById("service").value;
 
     document.getElementById("reviewName").textContent =
-        document.getElementById("firstName").value + " " +
-        document.getElementById("lastName").value;
+        document.getElementById("fullName").value 
+        
 
     document.getElementById("reviewEmail").textContent =
         document.getElementById("email").value;

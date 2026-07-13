@@ -469,7 +469,7 @@ footer{
 }
 
 /* CLOSE BUTTON */
-
+.close-register,
 .close-login{
 
     position:absolute;
@@ -489,7 +489,7 @@ footer{
     z-index:10;
 
 }
-
+.close-register:hover,
 .close-login:hover{
 
     color:#d69b91;
@@ -831,7 +831,6 @@ footer{
 .guest-button:hover{
 
     background:#d69b91;
-
     color:#fff;
 
 }
@@ -896,6 +895,68 @@ footer{
 
 }
 
+}
+
+/* REGISTER MODAL */
+#registerModal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.5);
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+}
+
+.register-box{
+    width:500px;
+    background:#fff;
+    border-radius:20px;
+    padding:40px;
+}
+
+.register-box input{
+    width:100%;
+    padding:15px;
+    margin:12px 0;
+    border:1px solid #ddd;
+    border-radius:10px;
+}
+
+.register-box button{
+    width:100%;
+    padding:15px;
+    background:#efc1b7;
+    border:none;
+    border-radius:40px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.register-box p{
+    text-align:center;
+    margin-top:20px;
+    color:#555;
+}
+
+.register-box p a{
+    color:#d69b91;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.register-box p a:hover{
+    color:#be7f74;
+}
+
+.register-box p a:visited{
+    color:#d69b91;
+}
+
+.register-box p a:active{
+    color:#d69b91;
 }
 
 
@@ -1277,4 +1338,58 @@ button {
 .active-btn {
     background-color: #d7b1aa;
     color: rgb(0, 0, 0);
+}
+
+.guest-banner{
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+
+    background:#fff5f2;
+
+    border-left:5px solid #d69b91;
+
+    padding:18px 25px;
+
+    border-radius:15px;
+
+    margin-bottom:30px;
+
+}
+
+.guest-banner i{
+
+    font-size:24px;
+    color:#d69b91;
+
+}
+
+.guest-banner strong{
+
+    color:#222;
+
+}
+
+.guest-banner a{
+
+    background:#d69b91;
+    color:white;
+    text-decoration:none;
+
+    padding:10px 22px;
+
+    border-radius:30px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.guest-banner a:hover{
+
+    background:#be7f74;
+
 }
