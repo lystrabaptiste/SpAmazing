@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Customer Dashboard</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- ===========================
+         SIDEBAR
+    ============================ -->
+
+    <aside class="sidebar">
+
+        <div class="profile-card">
+
+            <img src="{{ url_for('static', filename='images/user.jpg') }}" alt="Customer">
+
+            <h4>Welcome Back,</h4>
+
+            <h2>{{ current_user.first_name if current_user else "Lystra" }}</h2>
+
+            <span class="points">
+                <i class="fa-solid fa-crown"></i>
+                425 Points
+            </span>
+
+        </div>
+
+        <nav>
+
+            <ul>
+
+                <li class="active">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-calendar-days"></i>
+                    Upcoming Appointments
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    Appointment History
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-box"></i>
+                    My Orders
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-comments"></i>
+                    Chat
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-heart"></i>
+                    Favourite Services
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-user"></i>
+                    Profile
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-gear"></i>
+                    Settings
+                </li>
+
+            </ul>
+
+        </nav>
+
+        <div class="logout">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            Logout
+
+        </div>
+
+        <div class="refer-card">
+
+            <i class="fa-solid fa-user-group"></i>
+
+            <h3>Refer a Friend</h3>
+
+            <p>Earn bonus loyalty points when your friends book.</p>
+
+            <button>Refer Now</button>
+
+        </div>
+
+    </aside>
+
+    <!-- ===========================
+         MAIN CONTENT
+    ============================ -->
+
+    <main class="main-content">
+
+        <!-- Banner -->
+<div class="hero-images">
+    <img src="{{ url_for('static', filename='images/picture1.jpg') }}" alt="">
+    <img src="{{ url_for('static', filename='images/picture2.jpg') }}" alt="">
+    <img src="{{ url_for('static', filename='images/picture3.jpg') }}" alt="">
+    <img src="{{ url_for('static', filename='images/picture4.jpg') }}" alt="">
+</div>
+       
+
+        <!-- Welcome -->
+
+        <section class="welcome">
+
+            <div>
+
+                <h1>
+                    Welcome back,
+                    {{ current_user.first_name if current_user else "Lystra" }} 👋
+                </h1>
+
+                <p>
+                    Here's everything happening with your appointments,
+                    rewards and orders.
+                </p>
+
+            </div>
+
+            <button class="book-btn">
+
+                <i class="fa-solid fa-calendar-plus"></i>
+
+                Book Appointment
+
+            </button>
+
+        </section>
+
+        <!-- ===========================
+             DASHBOARD GRID START
+        ============================ -->
+
+        <section class="dashboard-grid">
+
+                  <!-- ===========================
+             UPCOMING APPOINTMENT
+        ============================ -->
+
+        <div class="card upcoming-card">
+
+            <div class="card-header">
+
+                <h3>
+
+                    <i class="fa-regular fa-calendar"></i>
+
+                    Upcoming Appointment
+
+                </h3>
+
+            </div>
+
+            <div class="appointment-content">
+
+                <!-- Service Image -->
+
+                <div class="appointment-image">
+
+                    <img src="{{ url_for('static', filename='images/manicure.jpeg') }}" alt="Gel Manicure">
+
+                </div>
+
+                <!-- Appointment Details -->
+
+                <div class="appointment-info">
+
+                    <h2>Gel Manicure</h2>
+
+                    <p>
+
+                        <i class="fa-regular fa-calendar"></i>
+
+                        Tuesday, July 21, 2026
+
+                    </p>
+
+                    <p>
+
+                        <i class="fa-regular fa-clock"></i>
+
+                        2:00 PM
+
+                    </p>
+
+                    <p>
+
+                        <i class="fa-solid fa-user"></i>
+
+                        Technician: Sarah James
+
+                    </p>
+
+                    <p>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        Trinity Branch
+
+                    </p>
+
+                    <p>
+
+                        <i class="fa-solid fa-scissors"></i>
+
+                        Duration: 1 Hour
+
+                    </p>
+
+                    <span class="status confirmed">
+
+                        Confirmed
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="appointment-buttons">
+
+                <button class="btn-primary">
+
+                    <i class="fa-solid fa-eye"></i>
+
+                    View Details
+
+                </button>
+
+                <button class="btn-outline">
+
+                    <i class="fa-solid fa-calendar-pen"></i>
+
+                    Reschedule
+
+                </button>
+
+                <button class="btn-outline danger">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                    Cancel
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ===========================
+             QUICK ACTIONS
+        ============================ -->
+
+        <div class="card quick-actions">
+
+            <div class="card-header">
+
+                <h3>
+
+                    <i class="fa-solid fa-bolt"></i>
+
+                    Quick Actions
+
+                </h3>
+
+            </div>
+
+            <div class="actions-grid">
+
+                <div class="action-box">
+
+                    <div class="action-icon">
+
+                        <i class="fa-solid fa-calendar-plus"></i>
+
+                    </div>
+
+                    <h4>Book Appointment</h4>
+
+                </div>
+
+                <div class="action-box">
+
+                    <div class="action-icon">
+
+                        <i class="fa-solid fa-bag-shopping"></i>
+
+                    </div>
+
+                    <h4>Order Products</h4>
+
+                </div>
+
+                <div class="action-box">
+
+                    <div class="action-icon">
+
+                        <i class="fa-solid fa-comments"></i>
+
+                    </div>
+
+                    <h4>Chat With Technician</h4>
+
+                </div>
+
+                <div class="action-box">
+
+                    <div class="action-icon">
+
+                        <i class="fa-solid fa-star"></i>
+
+                    </div>
+
+                    <h4>Leave Review</h4>
+
+                </div>
+
+            </div>
+
+        </div>
+
+                <!-- ===========================
+             APPOINTMENT HISTORY
+        ============================ -->
+
+        <div class="card history-card">
+
+            <div class="card-header">
+
+                <h3>
+
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+
+                    Appointment History
+
+                </h3>
+
+            </div>
+
+            <table class="history-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Service</th>
+                        <th>Date</th>
+                        <th>Technician</th>
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>Classic Pedicure</td>
+
+                        <td>July 10, 2026</td>
+
+                        <td>Jessica Brown</td>
+
+                        <td>
+
+                            <span class="complete">
+
+                                Completed
+
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Hydrating Facial</td>
+
+                        <td>June 22, 2026</td>
+
+                        <td>Sarah James</td>
+
+                        <td>
+
+                            <span class="complete">
+
+                                Completed
+
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Acrylic Refill</td>
+
+                        <td>June 5, 2026</td>
+
+                        <td>Emily Smith</td>
+
+                        <td>
+
+                            <span class="complete">
+
+                                Completed
+
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+            <div class="view-all">
+
+                <a href="#">
+
+                    View Full History
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ===========================
+             ORDER HISTORY
+        ============================ -->
+
+        <div class="card orders-card">
+
+            <div class="card-header">
+
+                <h3>
+
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+                    Order History
+
+                </h3>
+
+            </div>
+
+            <table class="history-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Product</th>
+                        <th>Order Date</th>
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>Nail Cuticle Oil</td>
+
+                        <td>July 15, 2026</td>
+
+                        <td>
+
+                            <span class="shipping">
+
+                                Shipped
+
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Facial Cleanser</td>
+
+                        <td>June 28, 2026</td>
+
+                        <td>
+
+                            <span class="complete">
+
+                                Delivered
+
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Massage Oil</td>
+
+                        <td>June 14, 2026</td>
+
+                        <td>
+
+                            <span class="processing">
+
+                                Processing
+
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+            <div class="view-all">
+
+                <a href="#">
+
+                    View All Orders
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>

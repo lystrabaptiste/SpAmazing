@@ -15,7 +15,7 @@ def shop():
 
 @app.route("/gallery")
 def gallery():
-    return render_template("gallery.html")
+    return render_template("dashboard.html")
 
 
 @app.route("/contact")
