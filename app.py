@@ -13,8 +13,8 @@ def shop():
     return render_template("shop.html")
 
 
-@app.route("/gallery")
-def gallery():
+@app.route("/dashboard")
+def dashboard():
     return render_template("dashboard.html")
 
 
