@@ -30,11 +30,11 @@
 
         <div class="profile-card">
 
-            <img src="{{ url_for('static', filename='images/user.jpg') }}" alt="Customer">
+            <img src="{{ url_for('static', filename='customerImages/user.png') }}" alt="Customer">
 
             <h4>Welcome Back,</h4>
 
-            <h2>{{ current_user.first_name if current_user else "Lystra" }}</h2>
+            <h2>{{ current_user.first_name if current_user else "Customer" }}</h2>
 
             <span class="points">
                 <i class="fa-solid fa-crown"></i>
@@ -136,7 +136,7 @@
 
                 <h1>
                     Welcome back,
-                    {{ current_user.first_name if current_user else "Lystra" }} 👋
+                    {{ current_user.first_name if current_user else "Customer" }} 👋
                 </h1>
 
                 <p>
@@ -350,7 +350,7 @@
 
         </div>
 
-                <!-- ===========================
+    <!--===========================
              APPOINTMENT HISTORY
         ============================ -->
 
